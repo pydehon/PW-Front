@@ -1,0 +1,11 @@
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.picture {
+    height: 100vh;
+    width: 50vw;
+    overflow: hidden;
+}

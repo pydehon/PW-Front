@@ -1,0 +1,22 @@
+.contactroot {
+    height: 100vh;
+    text-align: center;
+
+    .email {
+        width: 50vw;
+        margin: 10px;
+    }
+    .message {
+        width: 50vw;
+        margin: 10px;
+        height: 40vh;
+    }
+    .send {
+    }
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

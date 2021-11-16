@@ -1,0 +1,15 @@
+.skillroot {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .ulroot {
+        padding: 0;
+        margin: 0;
+        columns: 3;
+        display: inline-block;
+    }
+    li {
+        text-align: center;
+    }
+}

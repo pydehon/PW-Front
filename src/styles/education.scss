@@ -1,0 +1,29 @@
+.educationroot {
+    li {
+        text-align: center;
+
+        .educationheader {
+            margin-top: 40px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div{
+                padding-left: 10px;
+                h2 {
+                    padding-top: 10px;
+                    margin : 0;
+                }
+                h6 {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .content {
+        li {
+            display: block;
+        }
+    }
+}
