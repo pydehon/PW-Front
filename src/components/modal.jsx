@@ -11,14 +11,10 @@ class Modal extends React.Component {
         return (
             <div className="modalroot">
                 <div className="modalheader">
-                    <span className="modaltitle">Login</span>
+                    <span className="modaltitle">{this.props.modalTitle}</span>
                     <span className="close" onClick={this.props.handleModal}>&times;</span>
                 </div>
-                <input type="text" placeholder="username" />
-                <input type="password" placeholder="password"/>
-                <input type="submit" value="Login" onClick={this.props.signin}/>
-                <a onClick={this.props.pswdrecovery}>Forgot password?</a>
-                <a onClick={this.props.signup}>You don't have yet an account? please sign up!</a>
+                {this.props.children}
             </div>
         )
     }

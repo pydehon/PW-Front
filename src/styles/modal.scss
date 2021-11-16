@@ -1,13 +1,12 @@
 .modalroot {
-    height: 200px;
-    width: 400px;
+    width: 50vw;
     position: fixed;
     background-color: lightgray;
     z-index: 1;
     left: 50%;
     top: 50%;
     margin-top: -100px;
-    margin-left: -200px;
+    margin-left: -25vw;
     display: flex;
     flex-direction: column;
     padding : 10px;
@@ -24,8 +23,5 @@
             }
         }
     }
-    
-    input {
-        margin : 5px;
-    }
+
 }

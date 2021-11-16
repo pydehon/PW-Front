@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                         <li><a href="#contact">Contact</a></li>
                     </div>
                     <div className="rightpart">
-                        <li><a href="#login" onClick={this.props.handleModal}>Login</a></li>
+                        <li><a href="#login" onClick={this.props.handleLoginModal}>Login</a></li>
                     </div>
                 </ul>
             </div>
