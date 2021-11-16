@@ -9,6 +9,8 @@ import Experience from "./experience";
 import Education from "./education";
 import Contact from "./contact";
 import Modal from "./modal";
+import Login from "./login";
+import Signup from "./signup";
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -20,7 +22,6 @@ class HomePage extends React.Component {
     }
 
     handleLoginModal = () => {
-        console.log("test")
         this.setState(prevState =>{
             return{
                 loginModalOpened : !prevState.loginModalOpened
@@ -28,10 +29,10 @@ class HomePage extends React.Component {
         });
     }
 
-    handleSignupModal = () => {
-        console.log("test")
+    handleOpenSignupModal = () => {
         this.setState(prevState =>{
             return{
+                loginModalOpened : false,
                 signupModalOpened : !prevState.signupModalOpened
             }
         });
@@ -59,19 +60,10 @@ class HomePage extends React.Component {
                     </ScrollSnapSection>
                 </ScrollSnapArticle>
                 { this.state.loginModalOpened ? <Modal modalTitle="Login" handleModal={this.handleLoginModal}>
-                        <input type="text" placeholder="username" />
-                        <input type="password" placeholder="password"/>
-                        <input type="submit" value="Login" onClick={this.props.signin}/>
-                        <a onClick={this.props.pswdrecovery}>Forgot password?</a>
-                        <a onClick={this.handleSignupModal}>You don't have yet an account? please sign up!</a>
+                        <Login handleOpenSignupModal={this.handleOpenSignupModal}/>
                     </Modal> : null }
-                { this.state.signupModalOpened ? <Modal modalTitle="Signup" handleModal={this.handleSignupModal}>
-                        <input type="text" placeholder="Forname" />
-                        <input type="text" placeholder="Lastname" />
-                        <input type="text" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Type it again" />
-                        <input type="submit" value="Signup" />
+                { this.state.signupModalOpened ? <Modal modalTitle="Signup" handleModal={this.handleOpenSignupModal}>
+                        <Signup />
                 </Modal> : null }
             </div>
         )
